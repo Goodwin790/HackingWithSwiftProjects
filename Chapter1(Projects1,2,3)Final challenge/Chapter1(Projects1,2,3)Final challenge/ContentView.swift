@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  challenge0
+//  Chapter1(Projects1,2,3)Final challenge
 //
 //  Created by Сергей Киров on 10.07.2021.
 //
