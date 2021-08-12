@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var wakeUp = defaultWakeTime
     @State private var sleepAmount = 8.0
@@ -15,8 +16,8 @@ struct ContentView: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showingAlert = false
-    
-    
+
+ 
     
     var body: some View {
         
@@ -29,12 +30,14 @@ struct ContentView: View {
                     DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                         .labelsHidden()
                         .datePickerStyle(WheelDatePickerStyle())
+
+                    
                 }
                 
                 Section(header: Text("Desired amount of sleep")
                             .font(.headline)){
                     
-                        
+                    
                     
                     Stepper(value: $sleepAmount, in: 4...12, step: 0.25){
                         Text("\(sleepAmount, specifier: "%g") hours")
@@ -51,28 +54,26 @@ struct ContentView: View {
                                 Text("\($0) cups")
                             }
                         }
+
                     }
                 }
+                Section(header: Text("your ideal bedtime is...")){
+                        Text(calculateBedTime())}
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
             }
             .navigationBarTitle("BetterRest")
-            .navigationBarItems(trailing:
-                                    Button(action: calculateBedTime){
-                                        Text("Calculate")
-                                    }
-            )
-            .alert(isPresented: $showingAlert){
-                Alert( title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
-            }
         }
     }
-    
+
     static var defaultWakeTime: Date{
         var components = DateComponents()
         components.hour = 7
         components.minute = 0
         return Calendar.current.date(from: components) ?? Date()
     }
-    func calculateBedTime(){
+    
+    func calculateBedTime() -> String{
         let model = SleepCalculator()
         
         let components = Calendar.current.dateComponents([.hour, .minute],from: wakeUp)
@@ -87,13 +88,11 @@ struct ContentView: View {
             let formatter = DateFormatter()
             formatter.timeStyle = .short
             
-            alertMessage = formatter.string(from: sleepTime)
-            alertTitle = "Your ideal bedtime is..."
+            return formatter.string(from: sleepTime)
+            
         }catch{
-            alertTitle = "Error!"
-            alertMessage = "Sorry there was a problem calculating your bedtime."
+            return  "Sorry there was a problem calculating your bedtime."
         }
-        showingAlert = true
     }
 }
 

@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  BetterRestCopy
+//  WordScramble
 //
-//  Created by Сергей Киров on 30.07.2021.
+//  Created by Сергей Киров on 03.08.2021.
 //
 
 import SwiftUI

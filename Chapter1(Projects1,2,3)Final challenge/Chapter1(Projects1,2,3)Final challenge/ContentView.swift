@@ -27,6 +27,7 @@ struct ContentView: View {
     @State private var gameOver = false
     @State private var scoreTittle = ""
     @State private var score = 0
+ 
     var playerWay: String{
         let playerFortune: String
         if playerMustWin{
@@ -71,13 +72,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 }
-            .alert(isPresented: $gameOver) {
-                Alert(title: Text("Game over!!!"),
-                      message: Text(" Your score is \(score)"), dismissButton:
-                        .default(Text("continue")){
-                            self.playerAnswer()
-                        })
-            }
+ 
             
             .alert(isPresented: $showingScore) {
                 Alert(title: Text(scoreTittle), message: Text("Your score is \(score )"), dismissButton: .default(Text("Continue")) {
@@ -118,9 +113,12 @@ struct ContentView: View {
       
 
         if guessCounter == 10{
-            showingScore = false
-            gameOver = true
+           scoreTittle = "Game over!"
             guessCounter = 0
+        }
+        
+        if score <= 0 {
+            score = 0
         }
         showingScore = true
     }
