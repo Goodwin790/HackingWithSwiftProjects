@@ -1,14 +1,14 @@
 //
-//  Project8App.swift
-//  Project8
+//  P9DrawingApp.swift
+//  P9Drawing
 //
-//  Created by Сергей Киров on 05.10.2021.
+//  Created by Сергей Киров on 10.10.2021.
 //
 
 import SwiftUI
 
 @main
-struct Project8App: App {
+struct P9DrawingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

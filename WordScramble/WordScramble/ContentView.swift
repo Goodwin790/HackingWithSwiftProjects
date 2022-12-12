@@ -53,11 +53,16 @@ struct ContentView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .autocapitalization(.none)
-                List( usedWords, id: \.self){
-                    Image(systemName: "\($0.count).circle")
-                    Text($0)
-                    
+                List( usedWords, id: \.self){ word in
+                    HStack{
+                    Image(systemName: "\(word.count).circle")
+                    Text(word)
+                    }
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel(word)
+                    .accessibilityHint("\(word.count) letters")   
                 }
+                
                 HStack{
                     Text("score is")
                     Text("\(totalScore)")

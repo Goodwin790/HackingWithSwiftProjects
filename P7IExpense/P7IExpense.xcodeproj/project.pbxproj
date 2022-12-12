@@ -13,6 +13,7 @@
 		C1F4683E26E73FCC003E3F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F4683D26E73FCC003E3F8C /* Assets.xcassets */; };
 		C1F4684126E73FCC003E3F8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F4684026E73FCC003E3F8C /* Preview Assets.xcassets */; };
 		C1F4684426E73FCC003E3F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F4684226E73FCC003E3F8C /* LaunchScreen.storyboard */; };
+		C1F468702701FDF8003E3F8C /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4686F2701FDF8003E3F8C /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C1F4684026E73FCC003E3F8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1F4684326E73FCC003E3F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1F4684526E73FCC003E3F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1F4686F2701FDF8003E3F8C /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C1F4683726E73FCA003E3F8C /* AppDelegate.swift */,
 				C1F4683926E73FCA003E3F8C /* SceneDelegate.swift */,
 				C1F4683B26E73FCA003E3F8C /* ContentView.swift */,
+				C1F4686F2701FDF8003E3F8C /* AddView.swift */,
 				C1F4683D26E73FCC003E3F8C /* Assets.xcassets */,
 				C1F4684226E73FCC003E3F8C /* LaunchScreen.storyboard */,
 				C1F4684526E73FCC003E3F8C /* Info.plist */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F468702701FDF8003E3F8C /* AddView.swift in Sources */,
 				C1F4683826E73FCA003E3F8C /* AppDelegate.swift in Sources */,
 				C1F4683A26E73FCA003E3F8C /* SceneDelegate.swift in Sources */,
 				C1F4683C26E73FCA003E3F8C /* ContentView.swift in Sources */,
@@ -291,6 +295,7 @@
 				DEVELOPMENT_TEAM = TTMLBMXL57;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = P7IExpense/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +317,7 @@
 				DEVELOPMENT_TEAM = TTMLBMXL57;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = P7IExpense/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
